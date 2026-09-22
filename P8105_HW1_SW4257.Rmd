@@ -1,0 +1,16 @@
+---
+title: "P8105_HW1_SW4257"
+output: github_document
+---
+
+```{r, message=FALSE}
+library(palmerpenguins)
+```
+
+
+## Problem 1
+```{r}
+data("penguins", package = "palmerpenguins")
+```
+
+The `penguins` dataset contains measurements for `r nlevels(penguins$species)` penguin species, and they are `r levels(penguins$species)`. The penguins were observed on `r levels(penguins$island)` islands. Important variables include `species`, `island`, `bill length and bill depth in millimeters`, `flipper length in millimeters`, `body mass in grams`, `sex`, and `year`. The dataset contains `r nrow(penguins)` observations and `r ncol(penguins)` variables. The mean flipper length is `r round(mean(penguins$flipper_length_mm, na.rm = TRUE), 2)` mm.
